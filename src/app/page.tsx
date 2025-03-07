@@ -2,7 +2,7 @@
 // import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import guestList from "./guests.json";
-// import { useState } from "react";
+import { Suspense } from "react";
 
 interface GuestList {
   [key: string]: {
@@ -23,7 +23,7 @@ function mapGuestData(guestName: string) {
   return false;
 }
 
-export default function Home() {
+function Welcome() {
   // const [isValidGuest, setIsValidGuest] = useState(false);
   const searchParams = useSearchParams();
   const guestName: string = searchParams.get("guest") ?? "";
@@ -39,6 +39,10 @@ export default function Home() {
       "Hm, your invitation seems to be invalid, please reach out to Jay!";
   }
 
+  return welcomeMessage;
+}
+
+export default function Home() {
   // sendDiscordMsg(
   //   `https://discord.com/api/webhooks/1307121341308211280/w35MWYbQUY534_Uy1xUMB3N_4gBOeFJNLr2i2fKxGosebAmZeRSWgG9FqgrOI-OpW6g-`,
   //   guest
@@ -54,9 +58,11 @@ export default function Home() {
           height={38}
           priority
         /> */}
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          {welcomeMessage}
-        </ol>
+        <Suspense>
+          <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+            <Welcome />
+          </ol>
+        </Suspense>
 
         {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
