@@ -12,7 +12,7 @@ export function getWelcomeMessage(guestData) {
     "Hm, your invitation seems to be invalid, please reach out to Jay!";
 
   if (guestData) {
-    welcomeMessage = `Hi ${guestData.names
+    welcomeMessage = `Hello ${guestData.names
       .join(", ")
       .replace(/, ([^,]*)$/, ", and $1")}`;
   }
