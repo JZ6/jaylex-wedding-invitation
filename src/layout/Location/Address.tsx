@@ -1,26 +1,16 @@
 import styled from '@emotion/styled';
 
-import RoundButton from '@/components/RoundButton.tsx';
 import { Caption, PointTitle } from '@/components/Text.tsx';
 
 const Address = () => {
   return (
     <WayWrapper>
       <Way key={'\uD83D\uDCCD Grouse'}>
-        <PointTitle>{'\uD83D\uDCCD Grouse Mountain'}</PointTitle>
+        <PointTitle>{'\uD83D\uDCCD Instructions'}</PointTitle>
         <Caption>
-          {'\uD83D\uDC49\uD83C\uDFFB '}
-          <RoundButton
-            target="_blank"
-            href="https://maps.app.goo.gl/LB1NFgubGfVbKLxv6"
-            rel="noreferrer">
-            Directions
-          </RoundButton>
-        </Caption>
-        <Caption>
-          {'\uD83D\uDC49\uD83C\uDFFB After parking, go to '}
+          {'\uD83D\uDC49\uD83C\uDFFB After parking, make sure to go to '}
           <a href={'https://maps.app.goo.gl/HNiwjbC3sHBLpE9M6'}>guest services</a>
-          {' to pick up your gondola ticket and come on up!'}
+          {` to pick up your parking and gondola ticket if you don't have it yet, then put the parking in your car and come on up!`}
         </Caption>
       </Way>
     </WayWrapper>

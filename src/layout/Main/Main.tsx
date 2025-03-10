@@ -6,7 +6,7 @@ const Main = () => {
     <div>
       <MainImg src={mainImg} />
       <MainTitle>Welcome</MainTitle>
-      <SubTitle>You have been cordially invited to Jay & Alex's wedding!</SubTitle>
+      <SubTitle>You have been cordially invited to Alex & Jay's wedding!</SubTitle>
     </div>
   );
 };

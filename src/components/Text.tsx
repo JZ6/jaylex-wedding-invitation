@@ -20,6 +20,7 @@ export const PointTitle = styled.p`
   margin: 0;
   color: #e88ca6;
   white-space: pre-line;
+  padding-bottom: 10px;
 `;
 
 export const Paragraph = styled.p`
