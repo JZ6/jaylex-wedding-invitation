@@ -40,23 +40,23 @@ function App() {
         <Main />
       </Wrapper>
       <Wrapper>
-        <Heading1>모시는 글</Heading1>
+        <Heading1>test123</Heading1>
         <Invitation />
       </Wrapper>
       <Wrapper ref={galleryRef}>
         <Heading1>Gallery</Heading1>
         <GalleryWrap />
       </Wrapper>
-      <Wrapper>
-        <Heading1>마음 전하실 곳</Heading1>
+      {/* <Wrapper>
+        <Heading1>Send money</Heading1>
         <Account />
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper>
-        <Heading1>오시는 길</Heading1>
+        <Heading1>Location</Heading1>
         <Location />
       </Wrapper>
       <Wrapper>
-        <Heading1>신랑 신부에게</Heading1>
+        <Heading1>RSVP</Heading1>
         <Guestbook />
       </Wrapper>
       <FloatingBar isVisible={isVisible} />

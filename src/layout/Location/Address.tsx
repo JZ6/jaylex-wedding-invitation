@@ -1,21 +1,28 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
+
+import RoundButton from '@/components/RoundButton.tsx';
 import { Caption, PointTitle } from '@/components/Text.tsx';
-import { ILocationInfo } from '@/types/data.ts';
 
 const Address = () => {
-  const { locationInfo } = data;
   return (
     <WayWrapper>
-      {locationInfo?.map((item: ILocationInfo) => {
-        const { title, desc } = item;
-        return (
-          <Way key={title}>
-            <PointTitle>{title}</PointTitle>
-            <Caption>{desc}</Caption>
-          </Way>
-        );
-      })}
+      <Way key={'\uD83D\uDCCD Grouse'}>
+        <PointTitle>{'\uD83D\uDCCD Grouse Mountain'}</PointTitle>
+        <Caption>
+          {'\uD83D\uDC49\uD83C\uDFFB '}
+          <RoundButton
+            target="_blank"
+            href="https://maps.app.goo.gl/LB1NFgubGfVbKLxv6"
+            rel="noreferrer">
+            Directions
+          </RoundButton>
+        </Caption>
+        <Caption>
+          {'\uD83D\uDC49\uD83C\uDFFB After parking, go to '}
+          <a href={'https://maps.app.goo.gl/HNiwjbC3sHBLpE9M6'}>guest services</a>
+          {' to pick up your gondola ticket and come on up!'}
+        </Caption>
+      </Way>
     </WayWrapper>
   );
 };

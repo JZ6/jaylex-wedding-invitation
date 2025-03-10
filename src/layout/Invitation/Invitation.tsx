@@ -1,22 +1,19 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
 import Host from '../Contact/Host.tsx';
 import RoundButton from '@/components/RoundButton.tsx';
 import { Caption, Paragraph } from '@/components/Text.tsx';
 
 const Invitation = () => {
-  const { greeting } = data;
   return (
     <InvitationWrapper>
-      <Paragraph>{greeting.message}</Paragraph>
+      <Paragraph>{'greeting.message'}</Paragraph>
       <Host />
-      <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
-      {/* TODO: 구글캘린더 추가하기 기능을 넣는다면 링크 수정 */}
+      <Caption textAlign={'center'}>{'greeting.eventDetail'}</Caption>
       <RoundButton
         target="_blank"
-        href=""
+        href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGNybzY0ZzNiZjB0dWg0NHExZHIxYTBldTAgZmFtaWx5MTA3NjA1OTEwNzQ0OTM1MjE2ODhAZw&tmsrc=family10760591074493521688%40group.calendar.google.com"
         rel="noreferrer">
-        구글 캘린더 추가하기
+        Click me to add to your calendar!
       </RoundButton>
     </InvitationWrapper>
   );

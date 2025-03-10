@@ -26,10 +26,10 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href).then(
       () => {
-        alert('주소가 복사되었습니다.😉😉');
+        alert('Successfully copied');
       },
       () => {
-        alert('주소 복사에 실패했습니다.🥲🥲');
+        alert('Error');
       },
     );
   };
