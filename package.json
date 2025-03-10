@@ -2,7 +2,7 @@
   "name": "jaylex-wedding-invitation",
   "version": "0.0.1",
   "scripts": {
-    "gulp": "gulp"
+    "g": "gulp"
   },
   "author": "JZ",
   "homepage": "https://jz6.github.io/wedding-invitation/",
