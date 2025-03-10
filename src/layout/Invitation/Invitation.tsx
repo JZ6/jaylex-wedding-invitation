@@ -14,6 +14,11 @@ const Invitation = () => {
         rel="noreferrer">
         Click here to add to your calendar!
       </RoundButton>
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{
+          __html: ` <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NGNybzY0ZzNiZjB0dWg0NHExZHIxYTBldTAgZmFtaWx5MTA3NjA1OTEwNzQ0OTM1MjE2ODhAZw&amp;tmsrc=family10760591074493521688%40group.calendar.google.com"><img border="0" src="https://calendar.google.com/calendar/images/ext/gc_button1_en.gif" alt="Google Calendar"></a>`,
+        }}></div>
     </InvitationWrapper>
   );
 };
