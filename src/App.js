@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import {getGuestData, getWelcomeMessage } from "./guests";
+import { getGuestData, getWelcomeMessage } from "./guests";
 
 function App() {
   const { search } = window.location;
@@ -12,18 +11,17 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header"></header>
+      <div className="Welcome-div">
         <p>{welcomeMessage}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <div className="RSVP-div">
+        <p>Are you coming to our wedding?</p>
+        <div className="Button-container">
+          <button className="Button Btn-yes">Yes</button>
+          <button className="Button Btn-no">No</button>
+        </div>
+      </div>
     </div>
   );
 }
