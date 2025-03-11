@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+// import Button from '@/components/Button.tsx'; // Assuming you have a Button component
 import { Heading1, Paragraph } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 // import Account from '@/layout/Account/Account.tsx';
@@ -10,9 +11,19 @@ import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
 
+import data from 'data.json';
+import JSConfetti from 'js-confetti';
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
   const floatingRef = useRef(null);
+
+  const { emojis } = data;
+  const jsConfetti = new JSConfetti();
+
+  const yesClicked = () => {
+    void jsConfetti.addConfetti({ emojis });
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -45,6 +56,15 @@ function App() {
       </Wrapper>
       <Wrapper ref={floatingRef}>
         <Heading1>RSVP</Heading1>
+        <Paragraph>Are you coming to our wedding?</Paragraph>
+
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button onClick={yesClicked} className="RSVPbutton ButtonYes">
+            Yes
+          </button>
+          <button className="RSVPbutton ButtonNo">No</button>
+        </div>
+
         {/* <Guestbook /> */}
       </Wrapper>
 

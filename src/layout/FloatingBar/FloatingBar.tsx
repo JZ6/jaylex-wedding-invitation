@@ -61,7 +61,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
       </Button> */}
       <Button onClick={handleScroll}>
         <Upward fill="#e88ca6" />
-        Top
+        Back to Top
       </Button>
     </Nav>
   );

@@ -6,10 +6,10 @@ const GalleryWrap = () => {
   return (
     <ContentsWrap>
       <ImageMoreWrap isMoreView={true}>
-        {<WhiteGradientOverlay />}
+        {/* {<WhiteGradientOverlay />} */}
         <PhotoGallery />
       </ImageMoreWrap>
-      {<PlusButton>See All</PlusButton>}
+      {<PlusButton href="https://photos.app.goo.gl/8Bjh2T1q8acb2GHp8">See The Album</PlusButton>}
     </ContentsWrap>
   );
 };
@@ -34,14 +34,14 @@ const ImageMoreWrap = styled.div<{ isMoreView: boolean }>`
   overflow: hidden;
 `;
 
-const WhiteGradientOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
-`;
+// const WhiteGradientOverlay = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
+// `;
 
 const PlusButton = styled.div`
   width: 100%;
@@ -52,4 +52,5 @@ const PlusButton = styled.div`
   border-radius: 4px;
   border: 1px solid #dfdfdf;
   cursor: pointer;
-`;
+  text-decoration: none;
+`.withComponent('a');

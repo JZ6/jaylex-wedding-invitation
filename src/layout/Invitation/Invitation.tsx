@@ -12,7 +12,7 @@ const Invitation = () => {
         target="_blank"
         href="https://www.addevent.com/event/Tc25153249+google"
         rel="noreferrer">
-        Click here to add to your calendar!
+        Click me to add to your calendar!
       </RoundButton>
     </InvitationWrapper>
   );
