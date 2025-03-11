@@ -5,10 +5,7 @@ import PhotoGallery from './PhotoGallery.tsx';
 const GalleryWrap = () => {
   return (
     <ContentsWrap>
-      <ImageMoreWrap isMoreView={true}>
-        {/* {<WhiteGradientOverlay />} */}
-        <PhotoGallery />
-      </ImageMoreWrap>
+      <PhotoGallery />
       {<PlusButton href="https://photos.app.goo.gl/8Bjh2T1q8acb2GHp8">See The Album</PlusButton>}
     </ContentsWrap>
   );
@@ -25,14 +22,14 @@ const ContentsWrap = styled.div`
   align-items: center;
 `;
 
-const ImageMoreWrap = styled.div<{ isMoreView: boolean }>`
-  position: relative;
-  max-height: ${(props) =>
-    props.isMoreView
-      ? ''
-      : '60vh'}; /* isMoreView 상태가 true일 때는 높이 제한 없이, false일 때는 195px로 작게 보이도록 */
-  overflow: hidden;
-`;
+// const ImageMoreWrap = styled.div<{ isMoreView: boolean }>`
+//   position: relative;
+//   max-height: ${(props) =>
+//     props.isMoreView
+//       ? ''
+//       : '60vh'}; /* isMoreView 상태가 true일 때는 높이 제한 없이, false일 때는 195px로 작게 보이도록 */
+//   overflow: hidden;
+// `;
 
 // const WhiteGradientOverlay = styled.div`
 //   position: absolute;
