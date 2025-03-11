@@ -1,0 +1,84 @@
+{
+    "marchardon": {
+        "names": [
+            "Charlotte",
+            "Brandon",
+            "Margot"
+        ],
+        "language": "en"
+    },
+    "happyvalleyshredder": {
+        "guests": {
+            "Lesley": {
+                "picture": "lesley.jpg"
+            }
+        },
+        "language": "en"
+    },
+    "FranTheNan": {
+        "names": [
+            "Fran"
+        ],
+        "language": "en"
+    },
+    "stevalie": {
+        "names": [
+            "Steve",
+            "Natalie"
+        ],
+        "language": "en"
+    },
+    "ericsandy": {
+        "names": [
+            "Eric",
+            "Sandy"
+        ],
+        "language": "en"
+    },
+    "johndy": {
+        "names": [
+            "John",
+            "Jody"
+        ],
+        "language": "en"
+    },
+    "haileo": {
+        "names": [
+            "Hailey",
+            "Leo"
+        ],
+        "language": "en"
+    },
+    "johnlex": {
+        "names": [
+            "Alex",
+            "John"
+        ],
+        "language": "en"
+    },
+    "jennipoo": {
+        "names": [
+            "Jennifer"
+        ],
+        "language": "en"
+    },
+    "henley": {
+        "names": [
+            "Henley"
+        ],
+        "language": "en"
+    },
+    "tonycathy": {
+        "names": [
+            "Tony",
+            "Cathy"
+        ],
+        "language": "zh"
+    },
+    "ahbu": {
+        "names": [
+            "Zhou Lian Di"
+        ],
+        "language": "zh"
+    }
+}
