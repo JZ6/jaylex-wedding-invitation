@@ -10,20 +10,11 @@ import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
-
-import data from 'data.json';
-import JSConfetti from 'js-confetti';
+import RSVP from '@/layout/RSVP/RSVP.tsx';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
   const floatingRef = useRef(null);
-
-  const { emojis } = data;
-  const jsConfetti = new JSConfetti();
-
-  const yesClicked = () => {
-    void jsConfetti.addConfetti({ emojis });
-  };
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -47,38 +38,27 @@ function App() {
 
   return (
     <Container>
+      
       <Wrapper>
         <Main />
       </Wrapper>
+
       <Wrapper>
-        <Heading1>Saturday 2025 Feb 07 @ 4:30PM</Heading1>
+        <Heading1>Saturday, 7 Feb, 2025</Heading1>
         <Invitation />
       </Wrapper>
-      <Wrapper ref={floatingRef}>
+
+      <Wrapper>
         <Heading1>RSVP</Heading1>
-        <Paragraph>Are you coming to our wedding?</Paragraph>
-
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={yesClicked} className="RSVPbutton ButtonYes">
-            Yes
-          </button>
-          <button className="RSVPbutton ButtonNo">No</button>
-        </div>
-
-        {/* <Guestbook /> */}
+        <RSVP />
       </Wrapper>
-
-      {/* <Wrapper>
-        <Heading1>Send money</Heading1>
-        <Account />
-      </Wrapper> */}
 
       <Wrapper>
         <Heading1>Location</Heading1>
         <Location />
       </Wrapper>
 
-      <Wrapper>
+      <Wrapper ref={floatingRef}>
         <Heading1>Engagement Pictures</Heading1>
         <GalleryWrap />
       </Wrapper>
@@ -87,9 +67,11 @@ function App() {
         <Heading1>Suggestions</Heading1>
         <Paragraph>Check out Stanley park</Paragraph>
         <Paragraph></Paragraph>
+        <Paragraph></Paragraph>
       </Wrapper>
 
       <FloatingBar isVisible={isVisible} />
+
     </Container>
   );
 }

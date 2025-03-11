@@ -20,6 +20,7 @@ const ContentsWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 `;
 
 // const ImageMoreWrap = styled.div<{ isMoreView: boolean }>`

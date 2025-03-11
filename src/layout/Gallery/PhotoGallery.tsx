@@ -6,17 +6,17 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'contain',
-    width: '275px',
-    height: '180px',
+    width: '100%',
   };
 
   return (
     <Gallery>
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(1, 0fr)',
-          gridGap: 3,
+          // display: 'grid',
+          // gridTemplateColumns: 'repeat(1, 0fr)',
+          // gridGap: 3,
+          width: '100%',
         }}>
         {images.map((image, index) => {
           return (

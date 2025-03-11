@@ -8,9 +8,9 @@ const Address = () => {
       <Way key={'\uD83D\uDCCD Grouse'}>
         <PointTitle>{'\uD83D\uDCCD Instructions'}</PointTitle>
         <Caption>
-          {'\uD83D\uDC49\uD83C\uDFFB After parking, make sure to go to '}
+          {'\uD83D\uDC49\uD83C\uDFFB Make sure to pick up your parking and gondola passes from '}
           <a href={'https://maps.app.goo.gl/HNiwjbC3sHBLpE9M6'}>guest services</a>
-          {` to pick up your parking and gondola ticket if you don't have it yet, then put the parking in your car and come on up!`}
+          {`, then put the parking passes in your car and come on up!`}
         </Caption>
       </Way>
     </WayWrapper>
@@ -23,7 +23,7 @@ const WayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 0px;
+  margin: 10px 0px 0px 0px;
   gap: 20px;
 `;
 

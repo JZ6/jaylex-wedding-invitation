@@ -1,11 +1,16 @@
 import styled from '@emotion/styled';
+import { getGuestData, getGuestUrlParam, getWelcomeMessage, Guest } from './Guests';
 import mainImg from '@/assets/images/welcome.jpg';
 
 const Main = () => {
+  const guestParam: string = getGuestUrlParam();
+  const guestData: Guest | boolean = getGuestData(guestParam);
+  const welcomeMessage = getWelcomeMessage(guestData);
+
   return (
     <div>
       <MainImg src={mainImg} />
-      <MainTitle>Welcome</MainTitle>
+      <MainTitle>{welcomeMessage}</MainTitle>
       <SubTitle>You have been cordially invited to Alex & Jay's wedding!</SubTitle>
     </div>
   );
@@ -33,4 +38,5 @@ const SubTitle = styled.p`
   color: #2f2120;
   line-height: 140%;
   white-space: pre-line;
+  margin: 0px;
 `;

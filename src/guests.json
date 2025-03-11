@@ -1,84 +1,82 @@
 {
     "marchardon": {
-        "names": [
-            "Charlotte",
-            "Brandon",
-            "Margot"
-        ],
+        "guests": {
+            "Charlotte": {},
+            "Brandon": {},
+            "Margot": {}
+        },
         "language": "en"
     },
     "happyvalleyshredder": {
         "guests": {
-            "Lesley": {
-                "picture": "lesley.jpg"
-            }
+            "Lesley": {}
         },
         "language": "en"
     },
     "FranTheNan": {
-        "names": [
-            "Fran"
-        ],
+        "guests": {
+            "Fran": {}
+        },
         "language": "en"
     },
     "stevalie": {
-        "names": [
-            "Steve",
-            "Natalie"
-        ],
+        "guests": {
+            "Steve": {},
+            "Natalie": {}
+        },
         "language": "en"
     },
     "ericsandy": {
-        "names": [
-            "Eric",
-            "Sandy"
-        ],
+        "guests": {
+            "Eric": {},
+            "Sandy": {}
+        },
         "language": "en"
     },
     "johndy": {
-        "names": [
-            "John",
-            "Jody"
-        ],
+        "guests": {
+            "John": {},
+            "Jody": {}
+        },
         "language": "en"
     },
     "haileo": {
-        "names": [
-            "Hailey",
-            "Leo"
-        ],
+        "guests": {
+            "Hailey": {},
+            "Leo": {}
+        },
         "language": "en"
     },
     "johnlex": {
-        "names": [
-            "Alex",
-            "John"
-        ],
+        "guests": {
+            "Alex": {},
+            "John": {}
+        },
         "language": "en"
     },
     "jennipoo": {
-        "names": [
-            "Jennifer"
-        ],
+        "guests": {
+            "Jennifer": {}
+        },
         "language": "en"
     },
     "henley": {
-        "names": [
-            "Henley"
-        ],
+        "guests": {
+            "Henley": {}
+        },
         "language": "en"
     },
     "tonycathy": {
-        "names": [
-            "Tony",
-            "Cathy"
-        ],
+        "guests": {
+            "Tony": {},
+            "Cathy": {}
+        },
         "language": "zh"
     },
     "ahbu": {
-        "names": [
-            "Zhou Lian Di"
-        ],
+        "guests": {
+            "Zhou Lian Di": {}
+        },
         "language": "zh"
     }
 }

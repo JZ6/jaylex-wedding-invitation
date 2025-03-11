@@ -20,8 +20,6 @@ const Location = () => {
           Click me to navigate!
         </RoundButton>
       </Caption>
-      {/* <Map /> */}
-      {/* <MapButtons /> */}
       <Address />
     </LocationWrapper>
   );
