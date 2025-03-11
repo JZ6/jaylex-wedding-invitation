@@ -1,23 +1,15 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import styled from '@emotion/styled';
 import PhotoGallery from './PhotoGallery.tsx';
 
 const GalleryWrap = () => {
-  const [isMoreView, setIsMoreView] = useState(false);
-
-  const onClickImageMoreViewButton = () => {
-    setIsMoreView(!isMoreView);
-  };
-
   return (
     <ContentsWrap>
-      <ImageMoreWrap isMoreView={isMoreView}>
-        {!isMoreView && <WhiteGradientOverlay />}
+      <ImageMoreWrap isMoreView={true}>
+        {<WhiteGradientOverlay />}
         <PhotoGallery />
       </ImageMoreWrap>
-      {!isMoreView && (
-        <PlusButton onClick={onClickImageMoreViewButton}>더보기</PlusButton>
-      )}
+      {<PlusButton>See All</PlusButton>}
     </ContentsWrap>
   );
 };
@@ -48,10 +40,7 @@ const WhiteGradientOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
-    rgb(255, 255, 255) 90%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
 `;
 
 const PlusButton = styled.div`

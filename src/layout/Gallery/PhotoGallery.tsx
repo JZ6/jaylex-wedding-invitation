@@ -7,7 +7,7 @@ const PhotoGallery = () => {
     cursor: 'pointer',
     objectFit: 'contain',
     width: '100px',
-    height: '150px',
+    height: '90px',
   };
 
   return (
@@ -16,7 +16,7 @@ const PhotoGallery = () => {
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 0fr)',
-          gridGap: 2,
+          gridGap: 3,
         }}>
         {images.map((image, index) => {
           return (

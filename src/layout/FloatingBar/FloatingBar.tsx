@@ -57,11 +57,11 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
       </Button>
       <Button onClick={handleCopy}>
         <Share fill="#e88ca6" />
-        공유
+        Share
       </Button>
       <Button onClick={handleScroll}>
         <Upward fill="#e88ca6" />
-        위로
+        Back to top
       </Button>
     </Nav>
   );

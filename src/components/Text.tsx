@@ -33,3 +33,13 @@ export const Caption = styled.p<{ textAlign?: string }>`
   text-align: ${(props) => (props.textAlign ? props.textAlign : 'start')};
   white-space: pre-line;
 `;
+
+export function createHtmlDiv(__html: string) {
+  return (
+    <div
+      className="content"
+      dangerouslySetInnerHTML={{
+        __html,
+      }}></div>
+  );
+}

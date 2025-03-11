@@ -5,9 +5,9 @@ import RoundButton from '@/components/RoundButton.tsx';
 const Invitation = () => {
   return (
     <InvitationWrapper>
-      At the Timber room <br />
+      At the Timber Room <br />
       On Grouse Mountain <br />
-      The peak of Vancouver
+      The Peak of Vancouver
       <RoundButton
         target="_blank"
         href="https://www.addevent.com/event/Tc25153249+google"
