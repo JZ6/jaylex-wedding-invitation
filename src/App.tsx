@@ -12,7 +12,7 @@ import Main from '@/layout/Main/Main.tsx';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
-  const galleryRef = useRef(null);
+  const floatingRef = useRef(null);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -22,8 +22,8 @@ function App() {
   }, []);
 
   const checkScrollPosition = () => {
-    if (galleryRef.current) {
-      const { offsetTop } = galleryRef.current;
+    if (floatingRef.current) {
+      const { offsetTop } = floatingRef.current;
       const scrollPosition = window.scrollY;
 
       if (scrollPosition >= offsetTop) {
@@ -43,7 +43,7 @@ function App() {
         <Heading1>Saturday 2025 Feb 07 @ 4:30PM</Heading1>
         <Invitation />
       </Wrapper>
-      <Wrapper>
+      <Wrapper ref={floatingRef}>
         <Heading1>RSVP</Heading1>
         {/* <Guestbook /> */}
       </Wrapper>
@@ -52,14 +52,14 @@ function App() {
         <Heading1>Send money</Heading1>
         <Account />
       </Wrapper> */}
+
       <Wrapper>
         <Heading1>Location</Heading1>
         <Location />
       </Wrapper>
 
-      <Wrapper ref={galleryRef}>
+      <Wrapper>
         <Heading1>Engagement Pictures</Heading1>
-
         <GalleryWrap />
       </Wrapper>
 
@@ -69,7 +69,7 @@ function App() {
         <Paragraph></Paragraph>
       </Wrapper>
 
-      <FloatingBar isVisible={true} />
+      <FloatingBar isVisible={isVisible} />
     </Container>
   );
 }

@@ -5,7 +5,7 @@ import data from 'data.json';
 // import { realtimeDb } from 'firebase.ts';
 import JSConfetti from 'js-confetti';
 import Heart from '@/assets/icons/heart_plus.svg?react';
-import Share from '@/assets/icons/share.svg?react';
+// import Share from '@/assets/icons/share.svg?react';
 import Upward from '@/assets/icons/upward.svg?react';
 import Button from '@/components/Button.tsx';
 
@@ -23,16 +23,16 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   //   });
   // }, []);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
-      () => {
-        alert('Successfully copied');
-      },
-      () => {
-        alert('Error');
-      },
-    );
-  };
+  // const handleCopy = () => {
+  //   navigator.clipboard.writeText(window.location.href).then(
+  //     () => {
+  //       alert('Successfully copied');
+  //     },
+  //     () => {
+  //       alert('Error');
+  //     },
+  //   );
+  // };
 
   const handleCount = () => {
     void jsConfetti.addConfetti({ emojis });
@@ -53,15 +53,15 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
     <Nav isVisible={isVisible}>
       <Button onClick={handleCount}>
         <Heart fill="#e88ca6" />
-        {/*{count || ''}*/}
+        Celebrate
       </Button>
-      <Button onClick={handleCopy}>
+      {/* <Button onClick={handleCopy}>
         <Share fill="#e88ca6" />
-        Share
-      </Button>
+        Link Copied
+      </Button> */}
       <Button onClick={handleScroll}>
         <Upward fill="#e88ca6" />
-        Back to top
+        Top
       </Button>
     </Nav>
   );
