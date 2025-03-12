@@ -5,11 +5,17 @@ import { PointTitle } from '@/components/Text.tsx';
 const Invitation = () => {
   return (
     <InvitationWrapper>
-      <PointTitle>Gondola Boarding @ 4:00PM</PointTitle>
-      <PointTitle>Appretifs @ 4:30PM</PointTitle>
+      <PointTitle>
+        Gondola Boarding @ 4:00PM
+        <br />
+        <br />
+        Appretifs @ 4:30PM
+      </PointTitle>
+      {/* <Caption> */}
       At the Timber Room <br />
       On Grouse Mountain <br />
       The Peak of Vancouver
+      {/* </Caption> */}
       <RoundButton
         target="_blank"
         href="https://www.addevent.com/event/Tc25153249+google"

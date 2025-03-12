@@ -1,5 +1,13 @@
 import styled from '@emotion/styled';
 
+export const DateHeading = styled.p`
+  font-family: HSSanTokki20-Regular, serif;
+  font-size: 1.5rem;
+  margin: 0px 0px 20px 0px;
+  color: #608bc1;
+  white-space: pre-line;
+`;
+
 export const Heading1 = styled.p`
   font-family: HSSanTokki20-Regular, serif;
   font-size: 1.5rem;

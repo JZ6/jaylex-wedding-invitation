@@ -31,6 +31,7 @@ const MainTitle = styled.p`
   color: #2f2120;
   line-height: 120%;
   white-space: pre-line;
+  text-align: center;
 `;
 
 const SubTitle = styled.p`
@@ -39,4 +40,5 @@ const SubTitle = styled.p`
   line-height: 140%;
   white-space: pre-line;
   margin: 0px;
+  text-align: center;
 `;

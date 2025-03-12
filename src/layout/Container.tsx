@@ -6,7 +6,7 @@ const Container = styled.div`
   border-image-slice: 30% 49%;
   border-image-width: 280px;
   background-color: #ffffff;
-  width: 85vw;
+  width: 100vw;
   margin: 0 auto;
 
   @media screen and (min-width: 500px) {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 // import Button from '@/components/Button.tsx'; // Assuming you have a Button component
-import { Heading1, Paragraph } from '@/components/Text.tsx';
+import { DateHeading, Heading1, Paragraph } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 // import Account from '@/layout/Account/Account.tsx';
 import Container from '@/layout/Container.tsx';
@@ -44,7 +44,7 @@ function App() {
       </Wrapper>
 
       <Wrapper>
-        <Heading1>Saturday, 7 Feb, 2025</Heading1>
+        <DateHeading>Saturday, 7 Feb, 2025</DateHeading>
         <Invitation />
       </Wrapper>
 
