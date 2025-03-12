@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import data from 'data.json';
 import JSConfetti from 'js-confetti';
+import MealSelection from './MealSelection.tsx';
 import { Paragraph } from '@/components/Text.tsx';
 
 const RSVP = () => {
@@ -9,11 +10,11 @@ const RSVP = () => {
 
   const yesClicked = () => {
     void jsConfetti.addConfetti({ emojis });
-    setRSVPContent(
-      <>
-        <Paragraph>Nice</Paragraph>
-      </>,
-    );
+    setRSVPContent(MealSelection);
+  };
+
+  const noClicked = () => {
+    setRSVPContent(<Paragraph>Too bad!</Paragraph>);
   };
 
   const initRSVPContent = (
@@ -23,7 +24,9 @@ const RSVP = () => {
         <button onClick={yesClicked} className="RSVPbutton ButtonYes">
           Yes
         </button>
-        <button className="RSVPbutton ButtonNo">No</button>
+        <button onClick={noClicked} className="RSVPbutton ButtonNo">
+          No
+        </button>
       </div>
     </>
   );

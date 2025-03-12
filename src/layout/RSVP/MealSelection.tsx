@@ -1,36 +1,36 @@
-import { useState } from 'react';
-import data from 'data.json';
-import JSConfetti from 'js-confetti';
+import Carousel from 'react-bootstrap/Carousel';
 import { Paragraph } from '@/components/Text.tsx';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import image01 from '@/assets/images/01.jpg';
+import image02 from '@/assets/images/02.jpg';
+import image03 from '@/assets/images/03.jpg';
 
-const MealSelection = () => {
-  const { emojis } = data;
-  const jsConfetti = new JSConfetti();
-
-  const yesClicked = () => {
-    void jsConfetti.addConfetti({ emojis });
-    setRSVPContent(
-      <>
-        <Paragraph>Nice</Paragraph>
-      </>,
-    );
-  };
-
-  const initRSVPContent = (
-    <>
-      <Paragraph>Are you coming to our wedding?</Paragraph>
-      <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={yesClicked} className="RSVPbutton ButtonYes">
-          Yes
-        </button>
-        <button className="RSVPbutton ButtonNo">No</button>
-      </div>
-    </>
+function UncontrolledExample() {
+  return (
+    <Carousel data-bs-theme="dark">
+      <Carousel.Item>
+        <img width={250} height={250} src={image01} alt="Logo" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img width={250} height={250} src={image02} alt="Logo" />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img width={250} height={250} src={image03} alt="Logo" />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
+}
 
-  const [RSVPContent, setRSVPContent] = useState(initRSVPContent);
-
-  return <> {RSVPContent}</>;
-};
-
-export default MealSelection;
+export default UncontrolledExample;

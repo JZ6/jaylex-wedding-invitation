@@ -10,7 +10,8 @@ import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
-import RSVP from '@/layout/RSVP/RSVP.tsx';
+import MealSelection from '@/layout/RSVP/MealSelection.tsx';
+// import RSVP from '@/layout/RSVP/RSVP.tsx';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +39,6 @@ function App() {
 
   return (
     <Container>
-      
       <Wrapper>
         <Main />
       </Wrapper>
@@ -50,7 +50,8 @@ function App() {
 
       <Wrapper>
         <Heading1>RSVP</Heading1>
-        <RSVP />
+        {/* <RSVP /> */}
+        <MealSelection />
       </Wrapper>
 
       <Wrapper>
@@ -71,7 +72,6 @@ function App() {
       </Wrapper>
 
       <FloatingBar isVisible={isVisible} />
-
     </Container>
   );
 }

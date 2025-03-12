@@ -9,8 +9,20 @@ const PhotoGallery = () => {
     width: '100%',
   };
 
+  const options = {
+    arrowPrev: true,
+    arrowNext: true,
+    // zoom: false,
+    // close: false,
+    // zoom: false,
+    // close: false,
+    // counter: false,
+    // bgOpacity: 0.2,
+    // padding: { top: 20, bottom: 40, left: 100, right: 100 },
+  };
+
   return (
-    <Gallery>
+    <Gallery options={options}>
       <div
         style={{
           // display: 'grid',
