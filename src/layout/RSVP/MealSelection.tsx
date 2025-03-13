@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 // import { Paragraph } from '@/components/Text.tsx';
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import beef from '@/assets/images/beef.webp';
+import beef from '@/assets/images/beef.jpg';
 import salmon from '@/assets/images/salmon.jpg';
 // import image03 from '@/assets/images/beef.jpg';
 
