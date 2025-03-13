@@ -2,34 +2,36 @@ import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 // import { Paragraph } from '@/components/Text.tsx';
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import image01 from '@/assets/images/01.jpg';
-import image02 from '@/assets/images/02.jpg';
-import image03 from '@/assets/images/03.jpg';
+import beef from '@/assets/images/beef.webp';
+import salmon from '@/assets/images/salmon.jpg';
+// import image03 from '@/assets/images/beef.jpg';
 
 function UncontrolledExample() {
-  const x = <img width={'100%'} src={image01} alt="Logo" />;
+  const x = (
+    <img width="100%" style={{ opacity: 1, maxHeight: '600px' }} src={salmon} alt="salmon" />
+  );
   return (
     <MealSelectionWrapper>
       <Carousel interval={null}>
         <Carousel.Item>
           {x}
           <Carousel.Caption>
-            {/* <h3>First slide label</h3> */}
-            {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+            <h3>Beef Short Rib</h3>
+            <p>Buttermilk Mash Potatoes, Kale, Red Currant Jus</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           {x}
           <Carousel.Caption>
-            {/* <h3>Second slide label</h3> */}
-            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+            <h3>Herb Marinated BC Sockeye Salmon Filet</h3>
+            <p>Grilled Artichokes, Nugget Potatoes, Dill Horseradish Sauce</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           {x}
           <Carousel.Caption>
-            {/* <h1>Third slide label</h1> */}
-            {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+            <h3>Cheese Ravioli</h3>
+            <p>Butternut Squash Cream, Brown Butter, Sage And Pine Nuts</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
