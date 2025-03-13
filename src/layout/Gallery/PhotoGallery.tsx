@@ -7,6 +7,7 @@ const PhotoGallery = () => {
     cursor: 'pointer',
     objectFit: 'contain',
     width: '100%',
+    padding: '1px',
   };
 
   const options = {

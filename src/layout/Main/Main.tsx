@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
-import { getGuestData, getGuestUrlParam, getWelcomeMessage, Guest } from './Guests';
+import {
+  getGuestData,
+  getGuestUrlParam,
+  getWelcomeMessage,
+  Guest,
+} from '../../components/guests/Guests';
 import mainImg from '@/assets/images/welcome.jpg';
 
 const Main = () => {
@@ -8,11 +13,13 @@ const Main = () => {
   const welcomeMessage = getWelcomeMessage(guestData);
 
   return (
-    <div>
+    <>
       <MainImg src={mainImg} />
-      <MainTitle>{welcomeMessage}</MainTitle>
-      <SubTitle>You have been cordially invited to Alex & Jay's wedding!</SubTitle>
-    </div>
+      <div style={{ width: '90%', textAlign: 'center' }}>
+        <MainTitle>{welcomeMessage}</MainTitle>
+        <SubTitle>You have been cordially invited to Alex & Jay's wedding!</SubTitle>
+      </div>
+    </>
   );
 };
 
@@ -27,7 +34,7 @@ const MainImg = styled.img`
 
 const MainTitle = styled.p`
   font-family: HSSanTokki20-Regular, serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #2f2120;
   line-height: 120%;
   white-space: pre-line;
@@ -35,7 +42,7 @@ const MainTitle = styled.p`
 `;
 
 const SubTitle = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2f2120;
   line-height: 140%;
   white-space: pre-line;

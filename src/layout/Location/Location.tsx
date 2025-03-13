@@ -10,8 +10,9 @@ const Location = () => {
 
   return (
     <LocationWrapper>
-      <PointTitle>{'Grouse Mountain'}</PointTitle>
+      <PointTitle>Grouse Mountain</PointTitle>
       {createHtmlDiv(embeddedMap)}
+      <br />
       <Caption textAlign={'center'}>
         <RoundButton
           target="_blank"

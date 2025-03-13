@@ -1,45 +1,100 @@
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
+
+import { useState } from 'react';
 // import { Paragraph } from '@/components/Text.tsx';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import {
+  getGuestData,
+  getGuestNames,
+  getGuestUrlParam,
+  Guest,
+} from '../../components/guests/Guests';
 import beef from '@/assets/images/beef.jpg';
 import salmon from '@/assets/images/salmon.jpg';
-// import image03 from '@/assets/images/beef.jpg';
+import RoundButton from '@/components/RoundButton.tsx';
 
-function UncontrolledExample() {
-  const x = (
-    <img width="100%" style={{ opacity: 1, maxHeight: '600px' }} src={salmon} alt="salmon" />
-  );
+function MealSelection() {
+  const guestParam: string = getGuestUrlParam();
+  const guestData: Guest | boolean = getGuestData(guestParam);
+  const guestNames = getGuestNames(guestData);
+
+  const [curGuestIndex, setCurGuestIndex] = useState(0);
+  // const [message, setMessage] = useState<string>('');
+
+  const mealSelectionClick = () => {
+    setCurGuestIndex(curGuestIndex + 1);
+  };
+
   return (
     <MealSelectionWrapper>
-      <Carousel interval={null}>
+      <p style={{ fontSize: '0.8rem', marginBottom: '0' }}>
+        What would {guestNames[curGuestIndex]} like for dinner?
+      </p>
+      <Carousel interval={null} data-bs-theme="dark">
         <Carousel.Item>
-          {x}
+          <DishImg src={beef} alt="beef" />
           <Carousel.Caption>
-            <h3>Beef Short Rib</h3>
-            <p>Buttermilk Mash Potatoes, Kale, Red Currant Jus</p>
+            <DishTitle>Beef Short Ribs</DishTitle>
+            <DishDescription style={{ color: '#F5F5F5' }}>
+              Kale
+              <br />
+              Red Currant Jus
+              <br />
+              Buttermilk Mash Potatoes
+            </DishDescription>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          {x}
+          <DishImg src={salmon} alt="salmon" />
           <Carousel.Caption>
-            <h3>Herb Marinated BC Sockeye Salmon Filet</h3>
-            <p>Grilled Artichokes, Nugget Potatoes, Dill Horseradish Sauce</p>
+            <DishTitle>Herb Marinated Salmon</DishTitle>
+            <DishDescription style={{ color: '#F5F5F5' }}>
+              Nugget Potatoes
+              <br />
+              Grilled Artichokes
+              <br />
+              Dill Horseradish Sauce
+            </DishDescription>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           {x}
           <Carousel.Caption>
             <h3>Cheese Ravioli</h3>
             <p>Butternut Squash Cream, Brown Butter, Sage And Pine Nuts</p>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
+      <RoundButton style={{ background: '#4caf4fc2' }} onClick={mealSelectionClick}>
+        {guestNames[curGuestIndex]} wants this!
+      </RoundButton>
     </MealSelectionWrapper>
   );
 }
 
-export default UncontrolledExample;
+export default MealSelection;
+
+const DishTitle = styled.p`
+  font-family: HSSanTokki20-Regular, serif;
+  font-size: 1rem;
+  color: #f5f5f5;
+  line-height: 120%;
+  white-space: pre-line;
+  text-align: center;
+  -webkit-text-stroke: 0.03rem black;
+  margin-bottom: 0.5rem;
+`;
+
+const DishDescription = styled.p`
+  font-family: HSSanTokki20-Regular, serif;
+  font-size: 0.8rem;
+  color: #f5f5f5;
+  line-height: 120%;
+  white-space: pre-line;
+  text-align: center;
+  margin-bottom: 0;
+  -webkit-text-stroke: 0.03rem black;
+`;
 
 const MealSelectionWrapper = styled.div`
   display: flex;
@@ -47,4 +102,10 @@ const MealSelectionWrapper = styled.div`
   align-items: center;
   gap: 10px;
   width: 90%;
+`;
+
+const DishImg = styled.img`
+  border-radius: 36px;
+  width: 100%;
+  max-height: 360px;
 `;
