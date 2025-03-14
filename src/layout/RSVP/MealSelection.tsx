@@ -43,15 +43,15 @@ function MealSelection() {
 
   const finishedComponent = (
     <>
-      <p>All done!</p>
+      <RSVPTitle>Confirmed! </RSVPTitle>
+      <DishImg src={salmon} alt="salmon" />
+      <RSVPTitle>See you soon!</RSVPTitle>
     </>
   );
 
   const selectionComponent = (
     <>
-      <p style={{ fontSize: '0.8rem', marginBottom: '0' }}>
-        What would {guestNames[curGuestIndex]} like for dinner?
-      </p>
+      <RSVPTitle>What would {guestNames[curGuestIndex]} like for dinner?</RSVPTitle>
       <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <DishImg src={beef} alt="beef" />
@@ -87,7 +87,7 @@ function MealSelection() {
       </Carousel.Caption>
     </Carousel.Item> */}
       </Carousel>
-      <RoundButton style={{ background: '#4caf4fc2' }} onClick={mealSelectionClick}>
+      <RoundButton onClick={mealSelectionClick}>
         {guestNames[curGuestIndex]} will have this!
       </RoundButton>
     </>
@@ -101,6 +101,16 @@ function MealSelection() {
 }
 
 export default MealSelection;
+
+const RSVPTitle = styled.p`
+  font-family: HSSanTokki20-Regular, serif;
+  font-size: 0.8rem;
+  line-height: 120%;
+  color: #133e87;
+  white-space: pre-line;
+  text-align: center;
+  margin-bottom: 0;
+`;
 
 const DishTitle = styled.p`
   font-family: HSSanTokki20-Regular, serif;
