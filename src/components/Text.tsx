@@ -43,6 +43,16 @@ export const Caption = styled.p<{ textAlign?: string }>`
   margin-bottom: 0;
 `;
 
+export const RSVPTitle = styled.p`
+  font-family: HSSanTokki20-Regular, serif;
+  font-size: 0.8rem;
+  line-height: 120%;
+  color: #133e87;
+  white-space: pre-line;
+  text-align: center;
+  margin-bottom: 0;
+`;
+
 export function createHtmlDiv(__html: string) {
   return (
     <div

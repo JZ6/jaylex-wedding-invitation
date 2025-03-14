@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
-
 import {
   getGuestData,
   getGuestNames,
@@ -10,10 +9,12 @@ import {
 } from '../../components/guests/Guests';
 import { sendDiscordMessage } from '../../components/utils/discord';
 
-// import { Paragraph } from '@/components/Text.tsx';
 import beef from '@/assets/images/beef.jpg';
 import salmon from '@/assets/images/salmon.jpg';
+import { DishImg } from '@/components/Image.tsx';
 import RoundButton from '@/components/RoundButton.tsx';
+import { RSVPTitle } from '@/components/Text.tsx';
+import { RSVPWrapper } from '@/components/Wrapper.tsx';
 
 function MealSelection() {
   const guestParam: string = getGuestUrlParam();
@@ -97,24 +98,10 @@ function MealSelection() {
     </>
   );
 
-  return (
-    <MealSelectionWrapper>
-      {selctionFinished ? finishedComponent : selectionComponent}
-    </MealSelectionWrapper>
-  );
+  return <RSVPWrapper>{selctionFinished ? finishedComponent : selectionComponent}</RSVPWrapper>;
 }
 
 export default MealSelection;
-
-const RSVPTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
-  font-size: 0.8rem;
-  line-height: 120%;
-  color: #133e87;
-  white-space: pre-line;
-  text-align: center;
-  margin-bottom: 0;
-`;
 
 const DishTitle = styled.p`
   font-family: HSSanTokki20-Regular, serif;
@@ -136,18 +123,4 @@ const DishDescription = styled.p`
   text-align: center;
   margin-bottom: 0;
   -webkit-text-stroke: 0.6px black;
-`;
-
-const MealSelectionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 90%;
-`;
-
-const DishImg = styled.img`
-  border-radius: 36px;
-  width: 100%;
-  max-height: 360px;
 `;

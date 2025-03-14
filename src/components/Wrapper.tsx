@@ -10,5 +10,11 @@ const Wrapper = styled.section`
   max-width: 100%;
   box-sizing: border-box;
 `;
-
+export const RSVPWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+`;
 export default Wrapper;
