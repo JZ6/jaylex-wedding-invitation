@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 
-import { SetStateAction, useState } from 'react';
 // import { Paragraph } from '@/components/Text.tsx';
 import {
   getGuestData,
