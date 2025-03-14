@@ -1,16 +1,20 @@
 import styled from '@emotion/styled';
 
-import { Caption, PointTitle } from '@/components/Text.tsx';
+import { Caption } from '@/components/Text.tsx';
 
 const Address = () => {
   return (
     <WayWrapper>
       <Way key={'\uD83D\uDCCD Grouse'}>
-        <PointTitle>{'\uD83D\uDCCD Instructions'}</PointTitle>
+        <Caption>
+          {'\uD83D\uDC49\uD83C\uDFFB We suggest staying at the '}
+          <a href={'https://maps.app.goo.gl/qS1sz2e11FvxzWwe6'}>Seaside Hotel North Vancouver</a>
+          {`, the night before, then take an Uber/Taxi to grouse at 3pm!`}
+        </Caption>
         <Caption>
           {'\uD83D\uDC49\uD83C\uDFFB Make sure to pick up your parking and gondola passes from '}
           <a href={'https://maps.app.goo.gl/HNiwjbC3sHBLpE9M6'}>guest services</a>
-          {`, then put the parking passes in your car and come on up!`}
+          {`, then put the parking passes in your car if you have one and come on up!`}
         </Caption>
       </Way>
     </WayWrapper>

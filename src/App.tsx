@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 // import Button from '@/components/Button.tsx'; // Assuming you have a Button component
-import { DateHeading, Heading1, Paragraph } from '@/components/Text.tsx';
+import { DateHeading, Heading1 } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 // import Account from '@/layout/Account/Account.tsx';
 import Container from '@/layout/Container.tsx';
@@ -10,9 +10,8 @@ import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
-import Suggestions from '@/layout/Suggestions/Suggestions.tsx';
-import MealSelection from '@/layout/RSVP/MealSelection.tsx';
 import RSVP from '@/layout/RSVP/RSVP.tsx';
+import Suggestions from '@/layout/Suggestions/Suggestions.tsx';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);

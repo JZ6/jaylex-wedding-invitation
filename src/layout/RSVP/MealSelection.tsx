@@ -57,7 +57,7 @@ function MealSelection() {
   const selectionComponent = (
     <>
       <RSVPTitle>What would {guestNames[curGuestIndex]} like for dinner?</RSVPTitle>
-      <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
+      <Carousel interval={null} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <DishImg src={beef} alt="beef" />
           <Carousel.Caption>
