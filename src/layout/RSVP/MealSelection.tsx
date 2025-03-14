@@ -8,7 +8,7 @@ import {
   getGuestUrlParam,
   Guest,
 } from '../../components/guests/Guests';
-import { discordWebhookUrl, sendDiscordMessage } from '../../components/utils/discord';
+import { sendDiscordMessage } from '../../components/utils/discord';
 
 // import { Paragraph } from '@/components/Text.tsx';
 import beef from '@/assets/images/beef.jpg';
@@ -20,10 +20,8 @@ function MealSelection() {
   const guestData: Guest | boolean = getGuestData(guestParam);
   const guestNames = getGuestNames(guestData);
 
-  const [curGuestIndex, setCurGuestIndex] = useState(0);
-  // const [message, setMessage] = useState<string>('');
-
   const [index, setIndex] = useState(0);
+  const [curGuestIndex, setCurGuestIndex] = useState(0);
   const [selctionFinished, setSelctionFinished] = useState(false);
 
   const meals = ['Beef Short Ribs', 'Herb Marinated Salmon', 'Cheese Ravioli'];
@@ -33,9 +31,10 @@ function MealSelection() {
     if (curGuestIndex > guestNames.length - 2) {
       setSelctionFinished(true);
     }
+
     const content = `🍽️ ${guestNames[curGuestIndex]} will have ${meals[index]}`;
-    sendDiscordMessage(discordWebhookUrl, content);
-    console.log(guestNames[curGuestIndex], meals[index]);
+    console.log(content);
+    // sendDiscordMessage(content);
   };
 
   const handleSelect = (selectedIndex: number) => {
@@ -58,7 +57,7 @@ function MealSelection() {
           <DishImg src={beef} alt="beef" />
           <Carousel.Caption>
             <DishTitle>Beef Short Ribs</DishTitle>
-            <DishDescription style={{ color: '#F5F5F5' }}>
+            <DishDescription>
               Kale
               <br />
               Red Currant Jus
@@ -71,7 +70,7 @@ function MealSelection() {
           <DishImg src={salmon} alt="salmon" />
           <Carousel.Caption>
             <DishTitle>Herb Marinated Salmon</DishTitle>
-            <DishDescription style={{ color: '#F5F5F5' }}>
+            <DishDescription>
               Nugget Potatoes
               <br />
               Grilled Artichokes
@@ -110,7 +109,7 @@ const DishTitle = styled.p`
   line-height: 120%;
   white-space: pre-line;
   text-align: center;
-  -webkit-text-stroke: 0.03rem black;
+  -webkit-text-stroke: 0.6px black;
   margin-bottom: 0.5rem;
 `;
 
@@ -122,7 +121,7 @@ const DishDescription = styled.p`
   white-space: pre-line;
   text-align: center;
   margin-bottom: 0;
-  -webkit-text-stroke: 0.03rem black;
+  -webkit-text-stroke: 0.6px black;
 `;
 
 const MealSelectionWrapper = styled.div`
