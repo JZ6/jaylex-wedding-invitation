@@ -10,6 +10,7 @@ import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
+import Suggestions from '@/layout/Suggestions/Suggestions.tsx';
 import MealSelection from '@/layout/RSVP/MealSelection.tsx';
 // import RSVP from '@/layout/RSVP/RSVP.tsx';
 
@@ -66,9 +67,7 @@ function App() {
 
       <Wrapper>
         <Heading1>Suggestions</Heading1>
-        <Paragraph>Check out Stanley park</Paragraph>
-        <Paragraph></Paragraph>
-        <Paragraph></Paragraph>
+        <Suggestions />
       </Wrapper>
 
       <FloatingBar isVisible={isVisible} />

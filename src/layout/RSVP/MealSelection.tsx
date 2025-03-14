@@ -24,6 +24,10 @@ function MealSelection() {
   const [curGuestIndex, setCurGuestIndex] = useState(0);
   const [selctionFinished, setSelctionFinished] = useState(false);
 
+  if (guestNames.length === 0) {
+    return <p>Invalid invitation, please reach out to Jay!</p>;
+  }
+
   const meals = ['Beef Short Ribs', 'Herb Marinated Salmon', 'Cheese Ravioli'];
 
   const mealSelectionClick = () => {
