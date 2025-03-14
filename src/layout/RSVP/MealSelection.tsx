@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 // import { Paragraph } from '@/components/Text.tsx';
 import {
   getGuestData,
@@ -21,8 +21,15 @@ function MealSelection() {
   const [curGuestIndex, setCurGuestIndex] = useState(0);
   // const [message, setMessage] = useState<string>('');
 
+  const [index, setIndex] = useState(0);
+
   const mealSelectionClick = () => {
     setCurGuestIndex(curGuestIndex + 1);
+    console.log(index);
+  };
+
+  const handleSelect = (selectedIndex: number) => {
+    setIndex(selectedIndex);
   };
 
   return (
@@ -30,7 +37,7 @@ function MealSelection() {
       <p style={{ fontSize: '0.8rem', marginBottom: '0' }}>
         What would {guestNames[curGuestIndex]} like for dinner?
       </p>
-      <Carousel interval={null} data-bs-theme="dark">
+      <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <DishImg src={beef} alt="beef" />
           <Carousel.Caption>
@@ -66,7 +73,7 @@ function MealSelection() {
         </Carousel.Item> */}
       </Carousel>
       <RoundButton style={{ background: '#4caf4fc2' }} onClick={mealSelectionClick}>
-        {guestNames[curGuestIndex]} wants this!
+        {guestNames[curGuestIndex]} will have this!
       </RoundButton>
     </MealSelectionWrapper>
   );
