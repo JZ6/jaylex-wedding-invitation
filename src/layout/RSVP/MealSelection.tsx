@@ -2,13 +2,15 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 
-// import { Paragraph } from '@/components/Text.tsx';
 import {
   getGuestData,
   getGuestNames,
   getGuestUrlParam,
   Guest,
 } from '../../components/guests/Guests';
+import { discordWebhookUrl, sendDiscordMessage } from '../../components/utils/discord';
+
+// import { Paragraph } from '@/components/Text.tsx';
 import beef from '@/assets/images/beef.jpg';
 import salmon from '@/assets/images/salmon.jpg';
 import RoundButton from '@/components/RoundButton.tsx';
@@ -31,6 +33,8 @@ function MealSelection() {
     if (curGuestIndex > guestNames.length - 2) {
       setSelctionFinished(true);
     }
+    const content = `🍽️ ${guestNames[curGuestIndex]} will have ${meals[index]}`;
+    sendDiscordMessage(discordWebhookUrl, content);
     console.log(guestNames[curGuestIndex], meals[index]);
   };
 
