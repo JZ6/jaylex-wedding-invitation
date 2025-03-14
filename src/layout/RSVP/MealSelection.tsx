@@ -22,18 +22,30 @@ function MealSelection() {
   // const [message, setMessage] = useState<string>('');
 
   const [index, setIndex] = useState(0);
+  const [selctionFinished, setSelctionFinished] = useState(false);
+
+  const meals = ['Beef Short Ribs', 'Herb Marinated Salmon', 'Cheese Ravioli'];
 
   const mealSelectionClick = () => {
     setCurGuestIndex(curGuestIndex + 1);
-    console.log(index);
+    if (curGuestIndex > guestNames.length - 2) {
+      setSelctionFinished(true);
+    }
+    console.log(guestNames[curGuestIndex], meals[index]);
   };
 
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
 
-  return (
-    <MealSelectionWrapper>
+  const finishedComponent = (
+    <>
+      <p>All done!</p>
+    </>
+  );
+
+  const selectionComponent = (
+    <>
       <p style={{ fontSize: '0.8rem', marginBottom: '0' }}>
         What would {guestNames[curGuestIndex]} like for dinner?
       </p>
@@ -65,16 +77,22 @@ function MealSelection() {
           </Carousel.Caption>
         </Carousel.Item>
         {/* <Carousel.Item>
-          {x}
-          <Carousel.Caption>
-            <h3>Cheese Ravioli</h3>
-            <p>Butternut Squash Cream, Brown Butter, Sage And Pine Nuts</p>
-          </Carousel.Caption>
-        </Carousel.Item> */}
+      {x}
+      <Carousel.Caption>
+        <h3>Cheese Ravioli</h3>
+        <p>Butternut Squash Cream, Brown Butter, Sage And Pine Nuts</p>
+      </Carousel.Caption>
+    </Carousel.Item> */}
       </Carousel>
       <RoundButton style={{ background: '#4caf4fc2' }} onClick={mealSelectionClick}>
         {guestNames[curGuestIndex]} will have this!
       </RoundButton>
+    </>
+  );
+
+  return (
+    <MealSelectionWrapper>
+      {selctionFinished ? finishedComponent : selectionComponent}
     </MealSelectionWrapper>
   );
 }
