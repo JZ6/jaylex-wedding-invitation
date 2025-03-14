@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Address from './Address.tsx';
 
 import RoundButton from '@/components/RoundButton.tsx';
-import { Caption, createHtmlDiv, PointTitle } from '@/components/Text.tsx';
+import { createHtmlDiv, PointTitle } from '@/components/Text.tsx';
 
 const Location = () => {
   const embeddedMap =
@@ -12,15 +12,12 @@ const Location = () => {
     <LocationWrapper>
       <PointTitle>Grouse Mountain</PointTitle>
       {createHtmlDiv(embeddedMap)}
-      <br />
-      <Caption textAlign={'center'}>
-        <RoundButton
-          target="_blank"
-          href="https://maps.app.goo.gl/LB1NFgubGfVbKLxv6"
-          rel="noreferrer">
-          Click me to navigate!
-        </RoundButton>
-      </Caption>
+      <RoundButton
+        target="_blank"
+        href="https://maps.app.goo.gl/LB1NFgubGfVbKLxv6"
+        rel="noreferrer">
+        Click me to navigate!
+      </RoundButton>
       <Address />
     </LocationWrapper>
   );

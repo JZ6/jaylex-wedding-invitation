@@ -40,6 +40,7 @@ export const Caption = styled.p<{ textAlign?: string }>`
   font-weight: 200;
   text-align: ${(props) => (props.textAlign ? props.textAlign : 'start')};
   white-space: pre-line;
+  margin-bottom: 0;
 `;
 
 export function createHtmlDiv(__html: string) {

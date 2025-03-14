@@ -91,7 +91,7 @@ function MealSelection() {
       </Carousel.Caption>
     </Carousel.Item> */}
       </Carousel>
-      <RoundButton onClick={mealSelectionClick}>
+      <RoundButton style={{ marginTop: '0.3rem' }} onClick={mealSelectionClick}>
         {guestNames[curGuestIndex]} will have this!
       </RoundButton>
     </>

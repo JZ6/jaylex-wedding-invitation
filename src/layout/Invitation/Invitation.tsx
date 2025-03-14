@@ -9,8 +9,7 @@ const Invitation = () => {
       <PointTitle>Appretifs @ 4:30PM</PointTitle>
       At the Timber Room <br />
       On Grouse Mountain <br />
-      The Peak of Vancouver <br />
-      <br />
+      The Peak of Vancouver
       <RoundButton
         target="_blank"
         href="https://www.addevent.com/event/Tc25153249+google"

@@ -14,7 +14,7 @@ const GalleryWrap = () => {
 export default GalleryWrap;
 
 const ContentsWrap = styled.div`
-  margin: 30px 0;
+  margin: 5px 0;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
