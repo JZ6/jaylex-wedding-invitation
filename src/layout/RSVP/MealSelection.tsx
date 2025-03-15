@@ -108,25 +108,23 @@ function MealSelection() {
 export default MealSelection;
 
 const DishTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
   font-size: 1.1rem;
-  color: black;
+  color: white;
   line-height: 120%;
   white-space: pre-line;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 0.3rem;
   border-radius: 0.5rem;
+  backdrop-filter: blur(1px) brightness(50%);
 `;
 
 const DishDescription = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
   font-size: 0.9rem;
-  color: black;
+  color: white;
   line-height: 120%;
   white-space: pre-line;
   text-align: center;
   margin-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(1px) brightness(50%);
 `;

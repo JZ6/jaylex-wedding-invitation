@@ -8,6 +8,6 @@ export const DishImg = styled.img`
 
 export const SquareImg = styled.img`
   border-radius: 36px;
-  width: 96%;
+  width: 100%;
   max-height: 360px;
 `;

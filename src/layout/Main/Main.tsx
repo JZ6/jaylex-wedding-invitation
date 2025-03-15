@@ -30,6 +30,7 @@ const MainImg = styled.img`
   width: 90%;
   max-width: 450px;
   padding-top: 20px;
+  margin-bottom: 10px;
 `;
 
 const MainTitle = styled.p`

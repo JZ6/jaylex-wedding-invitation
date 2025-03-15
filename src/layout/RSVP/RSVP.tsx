@@ -29,7 +29,7 @@ const RSVP = () => {
   const initRSVPContent = (
     <RSVPWrapper>
       <RSVPTitle>Will you be attending our wedding?</RSVPTitle>
-      <SquareImg style={{ width: '96%' }} src={ringsquare} alt="ringsquare" />
+      <SquareImg src={ringsquare} alt="ringsquare" />
       <div style={{ display: 'flex', gap: '10px' }}>
         <button onClick={yesClicked} className="RSVPbutton ButtonYes">
           Yes
