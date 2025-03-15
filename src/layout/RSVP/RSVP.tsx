@@ -32,7 +32,7 @@ const RSVP = () => {
       <SquareImg src={ringsquare} alt="ringsquare" />
       <div style={{ display: 'flex', gap: '10px' }}>
         <button onClick={yesClicked} className="RSVPbutton ButtonYes">
-          Yes
+          Yes!
         </button>
         <button onClick={noClicked} className="RSVPbutton ButtonNo">
           No

@@ -16,7 +16,7 @@ const Location = () => {
         target="_blank"
         href="https://maps.app.goo.gl/LB1NFgubGfVbKLxv6"
         rel="noreferrer">
-        Click me to navigate!
+        Click me for navigation!
       </RoundButton>
       <Address />
     </LocationWrapper>

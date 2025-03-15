@@ -46,7 +46,7 @@ function MealSelection() {
 
   const finishedComponent = (
     <>
-      <RSVPTitle>Confirmed! </RSVPTitle>
+      <RSVPTitle>Confirmed!</RSVPTitle>
       <SquareImg src={grouse} alt="grouse " />
       <RSVPTitle>See you soon!</RSVPTitle>
     </>
