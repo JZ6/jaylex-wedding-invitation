@@ -5,7 +5,7 @@ import JSConfetti from 'js-confetti';
 import MealSelection from './MealSelection.tsx';
 import ringsquare from '@/assets/images/ringsquare.jpg';
 
-import { getGuestUrlParam } from '@/components/guests/Guests';
+import { getGuestData, getGuestNames, getGuestUrlParam, Guest } from '@/components/guests/Guests';
 import { SquareImg } from '@/components/Image.tsx';
 import { Paragraph, RSVPTitle } from '@/components/Text.tsx';
 import { sendDiscordMessage } from '@/components/utils/discord';
@@ -25,6 +25,14 @@ const RSVP = () => {
     const guestParam: string = getGuestUrlParam();
     sendDiscordMessage(guestParam + ' is not coming');
   };
+
+  const guestParam: string = getGuestUrlParam();
+  const guestData: Guest | boolean = getGuestData(guestParam);
+  const guestNames = getGuestNames(guestData);
+
+  if (guestNames.length === 0) {
+    return <p>Invalid invitation, please reach out to Jay!</p>;
+  }
 
   const initRSVPContent = (
     <RSVPWrapper>
