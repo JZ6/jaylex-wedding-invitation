@@ -1,21 +1,17 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
-import {
-  getGuestData,
-  getGuestNames,
-  getGuestUrlParam,
-  Guest,
-} from '../../components/guests/Guests';
-import { sendDiscordMessage } from '../../components/utils/discord';
 
 import beef from '@/assets/images/beef.jpg';
-import salmon from '@/assets/images/salmon.jpg';
 import grouse from '@/assets/images/grouse.jpg';
+import ravioli from '@/assets/images/ravioli.jpg';
+import salmon from '@/assets/images/salmon.jpg';
 
+import { getGuestData, getGuestNames, getGuestUrlParam, Guest } from '@/components/guests/Guests';
 import { DishImg, SquareImg } from '@/components/Image.tsx';
 import RoundButton from '@/components/RoundButton.tsx';
 import { RSVPTitle } from '@/components/Text.tsx';
+import { sendDiscordMessage } from '@/components/utils/discord';
 import { RSVPWrapper } from '@/components/Wrapper.tsx';
 
 function MealSelection() {
@@ -76,7 +72,7 @@ function MealSelection() {
         <Carousel.Item>
           <DishImg src={salmon} alt="salmon" />
           <Carousel.Caption>
-            <DishTitle>Herb Marinated Salmon</DishTitle>
+            <DishTitle>BC Sockeye Salmon</DishTitle>
             <DishDescription>
               Dill Horseradish Sauce
               <br />
@@ -87,7 +83,7 @@ function MealSelection() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <DishImg src={salmon} alt="salmon" />
+          <DishImg src={ravioli} alt="ravioli" />
           <Carousel.Caption>
             <DishTitle>Cheese Ravioli</DishTitle>
             <DishDescription>
@@ -113,22 +109,24 @@ export default MealSelection;
 
 const DishTitle = styled.p`
   font-family: HSSanTokki20-Regular, serif;
-  font-size: 1rem;
-  color: #f5f5f5;
+  font-size: 1.1rem;
+  color: black;
   line-height: 120%;
   white-space: pre-line;
   text-align: center;
-  -webkit-text-stroke: 0.6px black;
-  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.3rem;
+  border-radius: 0.5rem;
 `;
 
 const DishDescription = styled.p`
   font-family: HSSanTokki20-Regular, serif;
-  font-size: 0.8rem;
-  color: #f5f5f5;
+  font-size: 0.9rem;
+  color: black;
   line-height: 120%;
   white-space: pre-line;
   text-align: center;
   margin-bottom: 0;
-  -webkit-text-stroke: 0.6px black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
 `;

@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import data from 'data.json';
 import JSConfetti from 'js-confetti';
+
 import MealSelection from './MealSelection.tsx';
-import { getGuestUrlParam } from '../../components/guests/Guests';
-import { sendDiscordMessage } from '../../components/utils/discord';
 import ringsquare from '@/assets/images/ringsquare.jpg';
+
+import { getGuestUrlParam } from '@/components/guests/Guests';
 import { SquareImg } from '@/components/Image.tsx';
 import { Paragraph, RSVPTitle } from '@/components/Text.tsx';
-
+import { sendDiscordMessage } from '@/components/utils/discord';
 import { RSVPWrapper } from '@/components/Wrapper.tsx';
 
 const RSVP = () => {

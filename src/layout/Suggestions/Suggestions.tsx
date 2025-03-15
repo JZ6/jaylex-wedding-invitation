@@ -12,7 +12,7 @@ const Suggestions = () => {
           '\uD83D\uDCCD If you enjoy skiing, the world famous Whistler resort is only a short drive away.'
         }
       </Caption>
-      <Caption>{'\uD83D\uDCCD Oh Yeah, you are also halfway to Hawaii...'}</Caption>
+      <Caption>{'\uD83D\uDCCD Oh yeah, you are also already halfway to Hawaii...'}</Caption>
     </SuggestionsWrapper>
   );
 };
