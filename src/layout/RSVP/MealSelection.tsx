@@ -63,11 +63,11 @@ function MealSelection() {
           <Carousel.Caption>
             <DishTitle>Beef Short Ribs</DishTitle>
             <DishDescription>
-              Kale
+              Buttermilk Mash Potatoes
               <br />
               Red Currant Jus
               <br />
-              Buttermilk Mash Potatoes
+              Kale
             </DishDescription>
           </Carousel.Caption>
         </Carousel.Item>
@@ -76,21 +76,27 @@ function MealSelection() {
           <Carousel.Caption>
             <DishTitle>Herb Marinated Salmon</DishTitle>
             <DishDescription>
-              Nugget Potatoes
+              Dill Horseradish Sauce
               <br />
               Grilled Artichokes
               <br />
-              Dill Horseradish Sauce
+              Nugget Potatoes
             </DishDescription>
           </Carousel.Caption>
         </Carousel.Item>
-        {/* <Carousel.Item>
-      {x}
-      <Carousel.Caption>
-        <h3>Cheese Ravioli</h3>
-        <p>Butternut Squash Cream, Brown Butter, Sage And Pine Nuts</p>
-      </Carousel.Caption>
-    </Carousel.Item> */}
+        <Carousel.Item>
+          <DishImg src={salmon} alt="salmon" />
+          <Carousel.Caption>
+            <DishTitle>Cheese Ravioli</DishTitle>
+            <DishDescription>
+              Butternut Squash Cream
+              <br />
+              Sage And Pine Nuts
+              <br />
+              Brown Butter
+            </DishDescription>
+          </Carousel.Caption>
+        </Carousel.Item>
       </Carousel>
       <RoundButton style={{ marginTop: '0.3rem' }} onClick={mealSelectionClick}>
         {guestNames[curGuestIndex]} will have this!
