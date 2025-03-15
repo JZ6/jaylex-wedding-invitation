@@ -51,7 +51,6 @@ function App() {
       <Wrapper>
         <Heading1>RSVP</Heading1>
         <RSVP />
-        {/* <MealSelection /> */}
       </Wrapper>
 
       <Wrapper>

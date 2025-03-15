@@ -4,9 +4,9 @@ import JSConfetti from 'js-confetti';
 import MealSelection from './MealSelection.tsx';
 import { getGuestUrlParam } from '../../components/guests/Guests';
 import { sendDiscordMessage } from '../../components/utils/discord';
+import ringsquare from '@/assets/images/ringsquare.jpg';
+import { SquareImg } from '@/components/Image.tsx';
 import { Paragraph, RSVPTitle } from '@/components/Text.tsx';
-import salmon from '@/assets/images/salmon.jpg';
-import { DishImg } from '@/components/Image.tsx';
 
 import { RSVPWrapper } from '@/components/Wrapper.tsx';
 
@@ -27,8 +27,8 @@ const RSVP = () => {
 
   const initRSVPContent = (
     <RSVPWrapper>
-      <RSVPTitle>Are you coming to our wedding?</RSVPTitle>
-      <DishImg src={salmon} alt="salmon" />
+      <RSVPTitle>Will you be attending our wedding?</RSVPTitle>
+      <SquareImg style={{ width: '96%' }} src={ringsquare} alt="ringsquare" />
       <div style={{ display: 'flex', gap: '10px' }}>
         <button onClick={yesClicked} className="RSVPbutton ButtonYes">
           Yes

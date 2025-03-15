@@ -11,7 +11,9 @@ import { sendDiscordMessage } from '../../components/utils/discord';
 
 import beef from '@/assets/images/beef.jpg';
 import salmon from '@/assets/images/salmon.jpg';
-import { DishImg } from '@/components/Image.tsx';
+import grouse from '@/assets/images/grouse.jpg';
+
+import { DishImg, SquareImg } from '@/components/Image.tsx';
 import RoundButton from '@/components/RoundButton.tsx';
 import { RSVPTitle } from '@/components/Text.tsx';
 import { RSVPWrapper } from '@/components/Wrapper.tsx';
@@ -39,7 +41,7 @@ function MealSelection() {
 
     const content = `🍽️ ${guestNames[curGuestIndex]} will have ${meals[index]}`;
     console.log(content);
-    sendDiscordMessage(content);
+    sendDiscordMessage(content, '');
   };
 
   const handleSelect = (selectedIndex: number) => {
@@ -49,7 +51,7 @@ function MealSelection() {
   const finishedComponent = (
     <>
       <RSVPTitle>Confirmed! </RSVPTitle>
-      <DishImg src={salmon} alt="salmon" />
+      <SquareImg src={grouse} alt="grouse " />
       <RSVPTitle>See you soon!</RSVPTitle>
     </>
   );
