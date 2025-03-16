@@ -19,6 +19,8 @@ function MealSelection() {
   const guestData: Guest | boolean = getGuestData(guestParam);
   const guestNames = getGuestNames(guestData);
 
+  const isMultipleGuest = guestNames.length > 1;
+
   const [index, setIndex] = useState(0);
   const [curGuestIndex, setCurGuestIndex] = useState(0);
   const [selctionFinished, setSelctionFinished] = useState(false);
@@ -31,6 +33,7 @@ function MealSelection() {
 
   const mealSelectionClick = () => {
     setCurGuestIndex(curGuestIndex + 1);
+
     if (curGuestIndex > guestNames.length - 2) {
       setSelctionFinished(true);
     }
@@ -54,8 +57,10 @@ function MealSelection() {
 
   const selectionComponent = (
     <>
-      <RSVPTitle>What would {guestNames[curGuestIndex]} like for dinner?</RSVPTitle>
-      <Carousel interval={null} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
+      <RSVPTitle>
+        What would {isMultipleGuest ? guestNames[curGuestIndex] : 'you'} like for dinner?
+      </RSVPTitle>
+      <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <DishImg src={beef} alt="beef" />
           <Carousel.Caption>
@@ -97,7 +102,7 @@ function MealSelection() {
         </Carousel.Item>
       </Carousel>
       <RoundButton style={{ marginTop: '0.3rem' }} onClick={mealSelectionClick}>
-        {guestNames[curGuestIndex]} will have this!
+        {isMultipleGuest ? guestNames[curGuestIndex] : 'I'} will have this!
       </RoundButton>
     </>
   );
