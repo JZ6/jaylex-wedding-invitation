@@ -1,7 +1,7 @@
 {
   "name": "jaylex-wedding-invitation",
-  "version": "0.1.1",
-  "homepage": "https://jz6.github.io/wedding-invitation/",
+  "version": "0.1.2",
+  "homepage": "https://jz6.github.io/jaylex-wedding-invitation/",
   "type": "module",
   "scripts": {
     "dev": "vite",
