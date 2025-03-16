@@ -10,5 +10,5 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true, // also necessary
   },
-  base: '/wedding-invitation/',
+  base: '/jaylex-wedding-invitation/',
 });

@@ -16,9 +16,9 @@ export function getGuestUrlParam() {
   return guestParam;
 }
 
-export function getGuestData(guestName: string) {
-  if (guestName in guestList) {
-    return guestList[guestName];
+export function getGuestData(guestParam: string) {
+  if (guestParam in guestList) {
+    return guestList[guestParam];
   }
   return false;
 }
