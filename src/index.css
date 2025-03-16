@@ -63,3 +63,13 @@ body {
   background: #f44336af;
   color: white;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+button.active{
+  border-radius: 6px; 
+  backdrop-filter: brightness(95%);
+}
