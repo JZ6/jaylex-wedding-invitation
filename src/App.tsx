@@ -12,6 +12,9 @@ import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
 import RSVP from '@/layout/RSVP/RSVP.tsx';
 import Suggestions from '@/layout/Suggestions/Suggestions.tsx';
+// e2eafc background
+// 9bb1ff light blue
+// cce3de light green
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
