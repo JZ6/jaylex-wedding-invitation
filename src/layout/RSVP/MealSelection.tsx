@@ -40,7 +40,7 @@ function MealSelection() {
 
     const content = `🍽️ ${guestNames[curGuestIndex]} will have ${meals[index]}`;
     console.log(content);
-    sendDiscordMessage(content, '');
+    sendDiscordMessage(content);
   };
 
   const handleSelect = (selectedIndex: number) => {
