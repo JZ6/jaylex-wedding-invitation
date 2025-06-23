@@ -1,5 +1,5 @@
 export const notificationDiscordWebhookUrl =
-  'https://discord.com/api/webhooks/1307121341308211280/w35MWYbQUY534_Uy1xUMB3N_4gBOeFJNLr2i2fKxGosebAmZeRSWgG9FqgrOI-OpW6g-';
+  'https://discord.com/api/webhooks/1386776690679742484/dqCu-b9FJWixgIQzD9TXiOEB3t0-rPJ3YRki6AqQPOPhtwokCsQJKhNSASu-_OY2d1So';
 
 export function sendDiscordMessage(
   content: string,
