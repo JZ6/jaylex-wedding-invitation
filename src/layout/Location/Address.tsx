@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import rate from '@/assets/images/rate.png';
-import { Caption } from '@/components/Text.tsx';
 import { RateImg } from '@/components/Image.tsx';
+import { Caption } from '@/components/Text.tsx';
 
 const Address = () => {
   return (

@@ -15,5 +15,4 @@ export const SquareImg = styled.img`
 export const RateImg = styled.img`
   border-radius: 18px;
   width: 100%;
-  max-height: 360px;
 `;
