@@ -24,4 +24,5 @@ const SuggestionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100px;
+  padding-bottom: 6px;
 `;

@@ -1,20 +1,34 @@
 import styled from '@emotion/styled';
-
+import rate from '@/assets/images/rate.png';
 import { Caption } from '@/components/Text.tsx';
+import { RateImg } from '@/components/Image.tsx';
 
 const Address = () => {
   return (
     <WayWrapper>
       <Way key={'\uD83D\uDCCD Grouse'}>
         <Caption>
-          {'\uD83D\uDC49\uD83C\uDFFB We suggest staying at the '}
-          <a href={'https://maps.app.goo.gl/qS1sz2e11FvxzWwe6'}>Seaside Hotel North Vancouver</a>
-          {`, the night before, then take an Uber/Taxi to grouse at 3pm!`}
+          {'\uD83D\uDC49\uD83C\uDFFB We suggest staying the night before at the '}
+          <a
+            href={
+              'https://seasidehotelvancouver.ihotelier.com/book/accommodations?adults=&children=&datein=02/06/2026&dateout=02/07/2026&rate=wedding15'
+            }>
+            Seaside Hotel North Vancouver
+          </a>
         </Caption>
         <Caption>
-          {'\uD83D\uDC49\uD83C\uDFFB Make sure to pick up your parking and gondola passes from '}
+          {'Use the rate access code "wedding15" to get a 15% discount on your stay!'}
+          <RateImg src={rate} alt="rate" />
+        </Caption>
+        <Caption>
+          {`\uD83D\uDC49\uD83C\uDFFB On Saturday, make sure to take an Uber/Taxi to Grouse mountain before 3pm so you can arrive at our wedding on top of the mountain before the Hors d'oeuvres run out!`}
+        </Caption>
+        <Caption>
+          {
+            '\uD83D\uDC49\uD83C\uDFFB When you arrive at the base of the mountain, you can pick up your parking and gondola passes from '
+          }
           <a href={'https://maps.app.goo.gl/HNiwjbC3sHBLpE9M6'}>guest services</a>
-          {`, then put the parking passes in your car if you have one and come on up!`}
+          {` and come on up!`}
         </Caption>
       </Way>
     </WayWrapper>
