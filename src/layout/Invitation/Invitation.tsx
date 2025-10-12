@@ -6,7 +6,7 @@ const Invitation = () => {
   return (
     <InvitationWrapper>
       <PointTitle>Gondola Boarding @ 4:00PM</PointTitle>
-      <PointTitle>Appretifs @ 4:30PM</PointTitle>
+      <PointTitle>Apéritifs @ 4:45PM</PointTitle>
       At the Timber Room <br />
       On Grouse Mountain <br />
       The Peak of Vancouver
