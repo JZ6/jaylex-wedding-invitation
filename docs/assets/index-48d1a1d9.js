@@ -182,7 +182,7 @@ Error generating stack: `+o.message+`
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
-`.withComponent("a"),$y=()=>R(By,{children:[k(_o,{children:"Gondola Boarding @ 4:00PM"}),k(_o,{children:"Apéritifs @ 4:45PM"}),"At the Timber Room ",k("br",{}),"On Grouse Mountain ",k("br",{}),"The Peak of Vancouver",k(Wa,{target:"_blank",href:"https://www.addevent.com/event/Tc25153249+google",rel:"noreferrer",children:"Click me to add to your calendar!"})]}),By=U.div`
+`.withComponent("a"),$y=()=>R(By,{children:[k(_o,{children:"Gondola Boarding @ 4:00PM"}),k(_o,{children:"Aperitifs @ 4:45PM"}),"At the Timber Room ",k("br",{}),"On Grouse Mountain ",k("br",{}),"The Peak of Vancouver",k(Wa,{target:"_blank",href:"https://www.addevent.com/event/Tc25153249+google",rel:"noreferrer",children:"Click me to add to your calendar!"})]}),By=U.div`
   display: flex;
   flex-direction: column;
   align-items: center;
