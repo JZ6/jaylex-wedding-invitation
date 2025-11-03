@@ -40,7 +40,7 @@ function MealSelection() {
     return <p>Invalid invitation, please reach out to Jay!</p>;
   }
 
-  const meals = ['Beef Short Ribs', 'Herb Marinated Salmon', 'Cheese Ravioli'];
+  const meals = ['Beef Short Ribs', 'Cioppino', 'Chicken'];
 
   const mealSelectionClick = () => {
     setCurGuestIndex(curGuestIndex + 1);
@@ -74,41 +74,41 @@ function MealSelection() {
       <CarouselContainer>
         <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
-            <DishImg src={beef} alt="beef" />
+            <DishImg src={beef} alt="Beef" />
             <Carousel.Caption>
               <DishTitle>Beef Short Ribs</DishTitle>
               <DishDescription>
-                Buttermilk Mash Potatoes
+                Aromatic Carrots
                 <br />
-                Red Currant Jus
+                Pommes Purée
                 <br />
-                Kale
+                Red Wine Jus
               </DishDescription>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <DishImg src={salmon} alt="salmon" />
+            <DishImg src={salmon} alt="Fish" />
             <Carousel.Caption>
-              <DishTitle>BC Sockeye Salmon</DishTitle>
+              <DishTitle>Pacific Lingcod Cioppino</DishTitle>
               <DishDescription>
-                Dill Horseradish Sauce
+                Shrimp
                 <br />
-                Grilled Artichokes
+                Mussels, Clams
                 <br />
-                Nugget Potatoes
+                Tomato-fennel broth
               </DishDescription>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <DishImg src={ravioli} alt="ravioli" />
+            <DishImg src={ravioli} alt="Chicken" />
             <Carousel.Caption>
-              <DishTitle>Cheese Ravioli</DishTitle>
+              <DishTitle>Fraser Valley Chicken</DishTitle>
               <DishDescription>
-                Butternut Squash Cream
+                Charred Broccolini
                 <br />
-                Sage And Pine Nuts
+                Pommes Fondants
                 <br />
-                Brown Butter
+                Truffle Beurre Blanc
               </DishDescription>
             </Carousel.Caption>
           </Carousel.Item>
