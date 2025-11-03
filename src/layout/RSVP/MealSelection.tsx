@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
 
-import beef from '@/assets/images/beef.jpg';
+import beef from '@/assets/images/beef.jpeg';
+import chicken from '@/assets/images/chicken.png';
+import fish from '@/assets/images/fish.jpeg';
 import grouse from '@/assets/images/grouse.jpg';
-import ravioli from '@/assets/images/ravioli.jpg';
-import salmon from '@/assets/images/salmon.jpg';
 
 import { getGuestData, getGuestNames, getGuestUrlParam, Guest } from '@/components/guests/Guests';
 import { DishImg, SquareImg } from '@/components/Image.tsx';
@@ -87,7 +87,7 @@ function MealSelection() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <DishImg src={salmon} alt="Fish" />
+            <DishImg src={fish} alt="Fish" />
             <Carousel.Caption>
               <DishTitle>Pacific Lingcod Cioppino</DishTitle>
               <DishDescription>
@@ -100,7 +100,7 @@ function MealSelection() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <DishImg src={ravioli} alt="Chicken" />
+            <DishImg src={chicken} alt="Chicken" />
             <Carousel.Caption>
               <DishTitle>Fraser Valley Chicken</DishTitle>
               <DishDescription>
